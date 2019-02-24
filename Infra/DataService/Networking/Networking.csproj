@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{685018D7-AE33-4D57-87EC-92D1E03E9A76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Networking</RootNamespace>
+    <AssemblyName>Networking</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationConnectionManager.cs" />
+    <Compile Include="FaultToleranceConnection\FTConnectionController.cs" />
+    <Compile Include="FaultToleranceConnection\FTConnectionProtocolHeader.cs" />
+    <Compile Include="FaultToleranceConnection\FTFactories.cs" />
+    <Compile Include="FaultToleranceConnection\FTStateMachine.cs" />
+    <Compile Include="Transportation\DynamicEndpoint.cs" />
+    <Compile Include="Transportation\DynamicClient.cs" />
+    <Compile Include="Transportation\DynamicRemoteClient.cs" />
+    <Compile Include="Transportation\DynamicListener.cs" />
+    <Compile Include="Transportation\Interfaces.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FaultToleranceConnection\_MockTimer.cs" />
+    <Compile Include="Transportation\TCP\TCPClient.cs" />
+    <Compile Include="Transportation\TCP\TCPEndpoint.cs" />
+    <Compile Include="Transportation\TCP\TCPRemoteClient.cs" />
+    <Compile Include="Transportation\TCP\TCPListener.cs" />
+    <Compile Include="Transportation\WebSocket\WsClient.cs" />
+    <Compile Include="Transportation\WebSocket\WsEndpoint.cs" />
+    <Compile Include="Transportation\WebSocket\WsListener.cs" />
+    <Compile Include="Transportation\WebSocket\WsRemoteClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Algorithm\StateMachine\StateMachine.csproj">
+      <Project>{cfbf945c-c054-4ae1-8979-f9efa7560d77}</Project>
+      <Name>StateMachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{a822ee57-ea90-4ae3-8325-292b9d9d3381}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol\Protocol.csproj">
+      <Project>{a9f2f81f-5798-4d52-bc08-0b432a7e6351}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
