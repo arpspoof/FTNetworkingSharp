@@ -156,7 +156,6 @@ namespace Infra.ServiceFramework.Host
                                 lock (interfaceLock)
                                 {
                                     Log($"client {id} leave permanently", LogType.WARNING);
-                                    CloseInterface(id);
                                     timer.Dispose();
                                     connectionInterruptTimers.Remove(id);
                                     resumeTokens.Remove(id);
