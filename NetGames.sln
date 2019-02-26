@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumGameHost", "TestGame\Num
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumGameClient", "TestGame\NumGameClient\NumGameClient.csproj", "{425B6EE0-D639-4EA5-B99B-EDC51C16D466}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TetrisLogic", "TetrisOL\TetrisLogic\TetrisLogic.csproj", "{5844A440-EFAB-4874-AA41-F2D719579473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{425B6EE0-D639-4EA5-B99B-EDC51C16D466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{425B6EE0-D639-4EA5-B99B-EDC51C16D466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{425B6EE0-D639-4EA5-B99B-EDC51C16D466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5844A440-EFAB-4874-AA41-F2D719579473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5844A440-EFAB-4874-AA41-F2D719579473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5844A440-EFAB-4874-AA41-F2D719579473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5844A440-EFAB-4874-AA41-F2D719579473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
