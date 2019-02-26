@@ -5,6 +5,7 @@
 
 ## Game Logic Dev Guide
 #### Overview
+***Sample code available in TestGame folder***
 By using this networking framework, to develop a game we only need the logic module dll and GUI. Networking side is completely separated from the logic side so that the developer doesn't need to think about anything related to networking. In the game logic, basically you just need to decide when to send what data to which client. Also if needed, you need to add some specific logic to responde to events like *ClientDisconnect* or *ClientResume* which means that a user goes down and would like to resume the game.
 ### Server Side
 #### Define your game data
